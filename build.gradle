@@ -30,3 +30,9 @@ dependencies {
    testCompile 'org.mockito:mockito-core:1.9.5'
    testCompile 'org.hamcrest:hamcrest-library:1.3'
 }
+
+apply plugin: 'application'
+run {
+   mainClassName = "com.afl.challenge.game.ChildrensGames"
+   standardInput = System.in
+}
