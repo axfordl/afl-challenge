@@ -22,6 +22,15 @@ public class CompoundCondition implements Condition {
     }
 
     /**
+     * Static helper method to create a compound condition.
+     * @param conditions  the conditions to check.
+     * @return  the initialised condition.
+     */
+    public static CompoundCondition compoundCondition(Condition... conditions) {
+        return new CompoundCondition(conditions);
+    }
+
+    /**
      * {@inheritDoc}
      */
     @Override
@@ -35,4 +44,34 @@ public class CompoundCondition implements Condition {
         return true;
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((conditions == null) ? 0 : conditions.hashCode());
+        return result;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        CompoundCondition other = (CompoundCondition) obj;
+        if (conditions == null) {
+            if (other.conditions != null)
+                return false;
+        } else if (!conditions.equals(other.conditions))
+            return false;
+        return true;
+    }
 }
