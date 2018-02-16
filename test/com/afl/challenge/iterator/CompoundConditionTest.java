@@ -1,4 +1,4 @@
-package com.afl.challenge.test;
+package com.afl.challenge.iterator;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -14,9 +14,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-
-import com.afl.challenge.iterator.CompoundCondition;
-import com.afl.challenge.iterator.Condition;
 
 /**
  * Parameterized tests for {@link CompoundCondition}.

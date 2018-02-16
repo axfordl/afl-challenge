@@ -1,4 +1,4 @@
-package com.afl.challenge.test;
+package com.afl.challenge.iterator;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -6,9 +6,6 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import org.junit.Test;
-
-import com.afl.challenge.iterator.Condition;
-import com.afl.challenge.iterator.NotCondition;
 
 /**
  * Unit tests for {@link NotCondition}.
